@@ -1,0 +1,109 @@
+
+  /* Background styling for a mysterious effect */
+.home {
+    text-align: center;
+    background: url('/public/images/wanderlust.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center;
+    padding: 2rem; /* Add padding to give some space around */
+    color: #ffffff; /* Text color to ensure readability on dark background */
+  }
+  
+  .home h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffcc00; /* Gold color for a striking effect */
+    font-size: 3.5rem; /* Larger size for emphasis */
+    margin-top: 2rem; /* Add margin to push title down from the top */
+    margin-bottom: 2rem; /* Increased margin for spacing */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Enhanced text shadow for better visibility */
+  }
+  
+  .home button {
+    background: #343a40; /* Dark gray background color */
+    color: #ffffff; /* White text color for contrast */
+    border: none;
+    border-radius: 12px; /* Larger border-radius for more rounded corners */
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    font-size: 1.2rem; /* Larger font size for readability */
+    margin: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block; /* Ensures the button size is consistent */
+  }
+  
+  .home button:hover {
+    background: #495057; /* Slightly lighter dark gray on hover */
+    transform: scale(1.05);
+  }
+  
+  .home button:focus {
+    outline: none;
+  }
+  
+  /* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark background with slight transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: #343a40; /* Dark gray background to match the homepage buttons */
+    color: #ffffff; /* White text color for contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .popup-content h2 {
+    margin-bottom: 1rem;
+    color: #ffcc00; /* Gold color to match homepage title */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .popup-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup-content input {
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .popup-content button {
+    background: #0f1923; /* Blue color for consistency with homepage buttons */
+    color: white;
+    border: none;
+    border-radius: 12px; /* Match rounded corners with homepage buttons */
+    padding: 15px 30px; /* Match button size with homepage */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .popup-content button:hover {
+    background: #0360c4; /* Darker blue on hover */
+  }
+  
+  .popup-content .error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
