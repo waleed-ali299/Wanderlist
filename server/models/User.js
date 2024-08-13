@@ -5,29 +5,31 @@ const User = sequelize.define('User', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
-    primaryKey: true,
+    primaryKey: true
   },
   username: {
-    type: DataTypes.STRING(50),
-    allowNull: false,
-    unique: true,
+    type: DataTypes.STRING,
+    allowNull: false
   },
   email: {
-    type: DataTypes.STRING(100),
+    type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
+    unique: true
   },
   password: {
-    type: DataTypes.STRING(255),
-    allowNull: false,
+    type: DataTypes.STRING,
+    allowNull: false
   },
   created_at: {
     type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
+    defaultValue: DataTypes.NOW
   },
+  profilePhotoUrl: {
+    type: DataTypes.STRING
+  }
 }, {
   tableName: 'Users',
-  timestamps: false,
+  timestamps: false
 });
 
 module.exports = User;

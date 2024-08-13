@@ -1,40 +1,129 @@
+/* styles/MainPage.css */
+
 .main-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #f5f5f5;
+    background-color: #2b2b2b; /* Dark background for mystery */
+    padding: 20px;
   }
   
   .main-header {
-    background-color: #282c34;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(135deg, #1c1c1c, #6e6e6e); /* Dark gradient for header */
+    color: gold; /* Golden text color */
+    padding: 40px 20px;
     text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
   }
   
   .main-nav {
-    margin: 0.5rem 0;
+    margin: 20px 0;
   }
   
   .main-nav a {
-    color: #61dafb;
-    margin: 0 1rem;
+    margin: 0 15px;
     text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    font-size: 16px;
   }
   
   .main-nav a:hover {
     text-decoration: underline;
+    color: #f5c6c6; /* Slightly lighter golden for hover effect */
   }
   
   .main-content {
-    flex: 1;
-    padding: 2rem;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: gold;
+    border-bottom: 2px solid #f5c6c6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .continent {
+    margin-bottom: 60px;
+  }
+  
+  .continent h3 {
+    font-size: 22px;
+    color: #f5f5f5;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .countries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display 4 cards per row */
+    gap: 20px; /* Space between cards */
+  }
+  
+  .country-card {
+    background: #3b3b3b; /* Dark grey background */
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
+    overflow: hidden;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .country-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  }
+  
+  .country-image {
+    width: 100%;
+    height: 180px; /* Adjusted for better visual */
+    object-fit: cover;
+    border-bottom: 1px solid #444;
+  }
+  
+  .country-card h4 {
+    color: gold;
+    margin: 10px 0;
+  }
+  
+  .country-card p {
+    padding: 10px;
+    font-size: 16px;
+    color: #f5f5f5;
+  }
+  
+  button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcc00; /* Dark golden color */
+    color: #2b2b2b;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d4a000; /* Slightly darker golden for hover effect */
+    transform: scale(1.05);
   }
   
   .main-footer {
-    background-color: #282c34;
-    color: white;
+    background: linear-gradient(135deg, #1c1c1c, #6e6e6e); /* Matching footer gradient */
+    color: gold;
+    padding: 10px;
     text-align: center;
-    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   }
   

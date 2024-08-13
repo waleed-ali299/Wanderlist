@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 
 const RegisterPopup = ({ closePopup }) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
+  const navigate = useNavigate(); // Initialize useNavigate
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -16,6 +19,7 @@ const RegisterPopup = ({ closePopup }) => {
         password,
       });
       closePopup();
+      navigate('/mainpage'); // Redirect after login
     } catch (error) {
       setError('Error registering user');
     }

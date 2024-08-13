@@ -1,0 +1,39 @@
+/* styles/Travel.css */
+
+.travel-page {
+    padding: 20px;
+  }
+  
+  .continent {
+    margin-bottom: 40px;
+  }
+  
+  .country-card {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .country-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -6,22 +6,32 @@ const LoginPopup = ({ closePopup }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading state
+    setError(''); // Clear previous errors
+  
     try {
       const response = await axios.post('http://localhost:5004/api/users/login', {
         email,
         password,
       });
       localStorage.setItem('token', response.data.token); // Store JWT token
+      localStorage.setItem('username', response.data.user.username); // Store username
       closePopup();
       navigate('/mainpage'); // Redirect after login
     } catch (error) {
+      console.error('Login error:', error);
       setError('Invalid email or password');
+    } finally {
+      setLoading(false); // Reset loading state
     }
   };
+  
+  
 
   return (
     <div className="popup">
@@ -43,7 +53,9 @@ const LoginPopup = ({ closePopup }) => {
             required
           />
           {error && <p className="error">{error}</p>}
-          <button type="submit">Login</button>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Logging in...' : 'Login'}
+          </button>
           <button type="button" onClick={closePopup}>Close</button>
         </form>
       </div>
